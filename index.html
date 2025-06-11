@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-200">
+
+    <!-- Navegação lateral -->
+    <div class="fixed z-50 top-4 right-4 md:hidden">
+        <button id="mobile-menu-button" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200">
+            <i class="fas fa-bars text-xl"></i>
+        </button>
+    </div>
+    
+    <aside id="nav-lateral" class="fixed inset-y-0 left-0 z-40 w-64 bg-gradient-to-b from-white to-gray-100 dark:from-gray-800 dark:to-gray-900 shadow-lg transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out md:animate-[slideInFromLeft_1.5s_ease-out_forwards]">
+
+        <div class="h-full overflow-y-auto px-6 flex flex-col justify-center">
+            <h2 class="text-2xl font-bold mb-8 text-center">Meu Portfólio</h2>
+            <nav class="space-y-4 flex flex-col items-center">
+                <a href="#hero" class="flex items-center nav-link hover:text-gray-900 dark:hover:text-white w-full justify-center opacity-0 animate-menu-item" style="--delay: 0.1s">
+                    <i class="fas fa-home mr-2"></i>
+                    <span>Início</span>
+                </a>
+                <a href="#sobre" class="flex items-center nav-link hover:text-gray-900 dark:hover:text-white w-full justify-center opacity-0 animate-menu-item" style="--delay: 0.2s">
+                    <i class="fas fa-user mr-2"></i>
+                    <span>Sobre Mim</span>
+                </a>
+                <a href="#projetos" class="flex items-center nav-link hover:text-gray-900 dark:hover:text-white w-full justify-center">
+                    <i class="fas fa-code mr-2"></i>
+                    <span>Projetos</span>
+                </a>
+                <a href="#habilidades" class="flex items-center nav-link hover:text-gray-900 dark:hover:text-white w-full justify-center">
+                    <i class="fas fa-cogs mr-2"></i>
+                    <span>Habilidades</span>
+                </a>
+                <a href="#reflexao" class="flex items-center nav-link hover:text-gray-900 dark:hover:text-white w-full justify-center">
+                    <i class="fas fa-lightbulb mr-2"></i>
+                    <span>Reflexão</span>
+                </a>
+                <a href="#contato"class="flex items-center nav-link hover:text-gray-900 dark:hover:text-white w-full justify-center">
+                    <i class="fas fa-envelope mr-2"></i>
+                    <span>Contato</span>
+                </a>
+            </nav>
+            
+            <div class="mt-12">
+                <div class="flex justify-center mb-6">
+                    <button id="theme-toggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+                        <i class="fas fa-moon dark:hidden text-gray-700"></i>
+                        <i class="fas fa-sun hidden dark:block text-yellow-300"></i>
+                    </button>
+                </div>
+                
+                <div class="flex justify-center space-x-4">
+                    <a href="https://github.com/dudsvr" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/eduardo-vieira-roque-aab79634a/" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="mailto:dudz.vieira@gmail.com" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </aside>
+    
+    <div id="backdrop" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden"></div>
+    
+    <!-- Conteúdo Principal -->
+    <main class="md:ml-64 min-h-screen">
+
+        <!-- Seção Hero -->
+        <section id="hero" class="min-h-screen flex items-center justify-center px-6 py-20 md:py-0 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white dark:from-gray-900 dark:via-gray-900/80 dark:to-gray-900 z-0"></div>
+            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center opacity-20 dark:opacity-10 z-0"></div>
+            
+            <div class="max-w-4xl mx-auto text-center relative z-10 animate-fade-in">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-slide-up animate-delay-100">Eduardo Vieira Roque</h1>
+                <h2 class="text-xl md:text-2xl mb-6 text-gray-700 dark:text-gray-300 animate-slide-up animate-delay-200">Estudante de Desenvolvimento de Sistemas</h2>
+
+                <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-gray-600 dark:text-gray-400 animate-slide-up animate-delay-300">
+                    Desenvolvendo hoje as soluções de amanhã. Não é só código, é visão em construção.
+                </p>
+
+                <div class="flex justify-center space-x-4 animate-slide-up animate-delay-400">
+                    <a href="#projetos" class="px-6 py-3 bg-black dark:bg-white text-white dark:text-black rounded-full font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors">
+                        Ver Projetos
+                    </a>
+                    <a href="#contato" class="px-6 py-3 border-2 border-black dark:border-white text-black dark:text-white rounded-full font-medium hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-colors">
+                        Contate-me
+                    </a>
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- Seção Sobre Mim -->
+        <section id="sobre" class="py-20 px-6 bg-gray-50 dark:bg-gray-800">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold mb-12 text-center animate-fade-in">Sobre Mim</h2>
+                
+                <div class="grid md:grid-cols-2 gap-12 animate-fade-in">
+                    <div class="relative flex flex-col space-y-6 group">
+                        <div class="w-32 h-32 rounded-full overflow-hidden shadow-lg mx-auto mb-4">
+                            <img src="/img/eu 2.jpg" 
+                                 alt="Developer" 
+                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                                 loading="lazy">
+                        </div>
+                        <div class="p-6 bg-white dark:bg-gray-700 rounded-lg shadow-md">
+                            <h3 class="text-xl font-semibold mb-4">Apresentação</h3>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                Olá! Meu nome é Eduardo Vieira Roque, sou estudante de Desenvolvimento de Sistemas e atualmente estou em formação técnica no SENAI. Estou em constante aprendizado e busco sempre desenvolver habilidades tanto técnicas quanto interpessoais para atuar com qualidade e responsabilidade no mercado de TI.
+                            </p>
+                        </div>
+                        
+                        <div class="p-6 bg-white dark:bg-gray-700 rounded-lg shadow-md">
+                            <h3 class="text-xl font-semibold mb-4">Expectativas vs Realidade</h3>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                Quando entrei no curso, esperava aprender apenas a escrever código. A realidade mostrou que desenvolvimento de sistemas vai muito além, englobando o mercado de trabalho, princípios de design, UI/UX, metodologias ágeis e trabalho em equipe. A complexidade me surpreendeu positivamente!
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="p-6 bg-white dark:bg-gray-700 rounded-lg shadow-md h-full">
+                            <h3 class="text-xl font-semibold mb-4">Objetivos do Semestre</h3>
+                            <ul class="space-y-4 text-gray-600 dark:text-gray-300">
+
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle mt-1 mr-3 text-green-500"></i>
+                                    <span>Ter mais contato com o mundo do TI e entender os conceitos básicos</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle mt-1 mr-3 text-green-500"></i>
+                                    <span>Desenvolver meu trabalho em equipe e o convívio com meus colegas de classe</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle mt-1 mr-3 text-green-500"></i>
+                                    <span>Aprender a montar um bom perfil no Linkedin e entender mais sobre a conduta no mercado de trabalho</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle mt-1 mr-3 text-green-500"></i>
+                                    <span>Desenvolver uma pagina web entendendo o que está por trás do que aparece na tela</span>
+                                </li>
+                                 <li class="flex items-start">
+                                    <i class="fas fa-spinner mt-1 mr-3 text-blue-500"></i>
+                                    <span>Se aprofundar nos conceitos de design, prototipagem e UI/UX, melhorando meu processo criativo</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-spinner mt-1 mr-3 text-blue-500"></i>
+                                    <span>Aprender a trabalhar e dominar linguagens de marcação, estilização e programação: HTML5, CSS3 e JavaScript</span>
+                                </li>
+
+                                <li class="flex items-start">
+                                    <i class="far fa-circle mt-1 mr-3 text-gray-500"></i>
+                                    <span>Conhecer outras linguagens de programação</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="far fa-circle mt-1 mr-3 text-gray-500"></i>
+                                    <span>Entender sobre o Back-End e o que está por tras de toda a conexão entre a pagina e o usuário</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="far fa-circle mt-1 mr-3 text-gray-500"></i>
+                                    <span>Aprender Bancos de dados</span>
+                                </li>
+
+                        
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção dos Projetos -->
+        <section id="projetos" class="py-20 px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold mb-12 text-center">Meus Projetos</h2>
+                
+                <div class="space-y-16">
+                    <!-- Projeto 1 -->
+                    <div class="project-card transition-all duration-300 bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden animate-fade-in">
+                        <div class="md:flex">
+                            <div class="md:w-1/2 p-6 md:p-8 flex flex-col justify-between">
+                                <div>
+                                    <div class="flex justify-between items-start">
+                                        <h3 class="text-2xl font-bold mb-2">Figma - Prototipagem de Alta Fidelidade</h3>
+                                        <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-sm font-medium">Aprendizado</span>
+                                    </div>
+                                    <p class="text-gray-600 dark:text-gray-300 mb-4">26 de Março</p>
+                                    <p class="text-gray-600 dark:text-gray-300 mb-4">Atividade Trimestral. Dividida em 3 atividades distintas: Apresentação pessoal - Projeto de escolha livre- Animação sobre o Figma.</p>
+                                    
+                                    <h4 class="font-semibold mb-2">Desafios:</h4>
+                                    <ul class="list-disc pl-5 text-gray-600 dark:text-gray-300 mb-4">
+                                        <li>Implementação de animações e uso de plugins corretamente</li>
+                                        <li>Produção de um fluxo de navegação fluido</li>
+                                        <li>Processo criativo, dificuldades em criar coisas novas </li>
+                                    </ul>
+                                    
+                                    <h4 class="font-semibold mb-2">Aprendizados:</h4>
+                                    <ul class="list-disc pl-5 text-gray-600 dark:text-gray-300 mb-4">
+                                        <li>Manipulação e familiarização do software Figma</li>
+                                        <li>Ideias de design novas adicionadas a biblioteca visual</li>
+                                        <li>Aprofundação nos conceitos de um bom protótipo</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="mt-4">
+                                    <a href="https://www.figma.com/design/wZ4BJemFC5MnSJpCbZXqEb/Atividade-Trimestral?node-id=0-1&t=iWBncWpW2YIXcM5i-1" target="_blank" class="flex items-center text-blue-600 dark:text-blue-400 hover:underline">
+                                        <i class="fas fa-external-link-alt mr-2"></i> Ver Projeto
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="md:w-1/2 bg-gray-200 dark:bg-gray-600 flex items-center justify-center p-8 project-image-container">
+                                <div class="relative w-full h-64 md:h-full flex items-center justify-center">
+                                    
+                                    <img src="img/Figma.png" 
+                                         class="w-full h-full object-cover rounded-lg shadow-inner" 
+                                         alt="Projeto Figma"
+                                         loading="lazy">
+
+                                    <div class="absolute inset-0 rounded-lg shadow-inner flex items-center justify-center project-image-hover"></div>
+                                    
+                                    <img src="img/Introdução 2.png" 
+                                         class="hidden project-preview-source" 
+                                         alt="Project preview"
+                                         loading="lazy">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                    <!-- Projeto 2 -->
+                    <div class="project-card transition-all duration-300 bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden animate-fade-in animate-delay-200">
+                        <div class="md:flex flex-row-reverse">
+                            <div class="md:w-1/2 p-6 md:p-8 flex flex-col justify-between">
+                                <div>
+                                    <div class="flex justify-between items-start">
+                                        <h3 class="text-2xl font-bold mb-2">Aplicativo de Música</h3>
+                                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">Em progresso</span>
+                                    </div>
+                                    <p class="text-gray-600 dark:text-gray-300 mb-4">28 de Março</p>
+                                    <p class="text-gray-600 dark:text-gray-300 mb-4">Protótipo de alta fidelidade para um aplicativo de música, com o objetivo de criar uma interface visual interativa que represente fielmente a experiência do usuário final, considerando aspectos como design, usabilidade e funcionalidades essenciais.</p>
+                                    
+                                    <h4 class="font-semibold mb-2">Desafios:</h4>
+                                    <ul class="list-disc pl-5 text-gray-600 dark:text-gray-300 mb-4">
+                                        <li>Planejamento de funções dentro do grupo</li>
+                                        <li>Simular interações reais como navegação entre telas</li>
+                                        <li>Achar algo para se diferenciar ou se destacar entre os aplicativos de músicas ja existentes</li>
+                                    </ul>
+                                    
+                                    <h4 class="font-semibold mb-2">Aprendizados:</h4>
+                                    <ul class="list-disc pl-5 text-gray-600 dark:text-gray-300 mb-4">
+                                        <li>Trabalho em equipe e melhor planejamento de tarefas</li>
+                                        <li>Novas animações e interações</li>
+                                        <li>Padrões de design UI/UX</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="mt-4">
+                                    <a href="https://www.figma.com/proto/EpcDpFYZRk96g03hrAF3PC/Prot%C3%B3tipo-BeatFLow?node-id=0-1&t=E1Ph9JqarKqMUb1U-1" target="_blank" class="flex items-center text-blue-600 dark:text-blue-400 hover:underline">
+                                        <i class="fas fa-external-link-alt mr-2"></i> Ver Projeto
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="md:w-1/2 bg-gray-200 dark:bg-gray-600 flex items-center justify-center p-8 project-image-container">
+                                <div class="relative w-full h-64 md:h-full flex items-center justify-center">
+
+                                    <img src="img/Captura de tela 2025-06-11 110801.png" 
+                                         class="w-full h-full object-cover rounded-lg shadow-inner" 
+                                         alt="Projeto Figma"
+                                         loading="lazy">
+
+                                    <div class="absolute inset-0 rounded-lg shadow-inner flex items-center justify-center project-image-hover"></div>
+                                    
+                                    <img src="img/BeatFlow (4).png" 
+                                         class="hidden project-preview-source" 
+                                         alt="Project preview"
+                                         loading="lazy">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <!-- Projeto 3 -->
+                    <div class="project-card transition-all duration-300 bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden animate-fade-in animate-delay-400">
+                        <div class="md:flex">
+                            <div class="md:w-1/2 p-6 md:p-8 flex flex-col justify-between">
+                                <div>
+                                    <div class="flex justify-between items-start">
+                                        <h3 class="text-2xl font-bold mb-2">Rapper Abebe Bikila</h3>
+                                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm font-medium">Concluído</span>
+                                    </div>
+                                    <p class="text-gray-600 dark:text-gray-300 mb-4">25 de Abril</p>
+                                    <p class="text-gray-600 dark:text-gray-300 mb-4">Landing page de um projeto pessoal que expresse uma paixão ou interesse, com o objetivo de criar um layout responsivo utilizando Flexbox como principal recurso de estilização de posicionamento.</p>
+                                    
+                                    <h4 class="font-semibold mb-2">Tecnologias Usadas:</h4>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">HTML5</span>
+                                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 rounded-full text-sm">CSS3</span>
+                                    </div>
+                                    
+                                    <h4 class="font-semibold mb-2">Desafios:</h4>
+                                    <ul class="list-disc pl-5 text-gray-600 dark:text-gray-300 mb-4">
+                                        <li>Implementação do display flex</li>
+                                        <li>Código HTML semântico</li>
+                                        <li>Estilização através do CSS3</li>
+                                    </ul>
+                                    
+                                    <h4 class="font-semibold mb-2">Aprendizados:</h4>
+                                    <ul class="list-disc pl-5 text-gray-600 dark:text-gray-300 mb-4">
+                                        <li>Aperfeiçoamento da manipulação do display flex para posicionamento de elementos</li>
+                                        <li>Entendimento do uso de div e containers</li>
+                                        <li>Implementação de imagens ao código</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="mt-4">
+                                    <a href="https://dudsvr.github.io/Landing-Page---Flexbox/?authuser=2" class="flex items-center text-blue-600 dark:text-blue-400 hover:underline" target="_blank">
+                                        <i class="fas fa-external-link-alt mr-2"></i> Ver Projeto
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 bg-gray-200 dark:bg-gray-600 flex items-center justify-center p-8 project-image-container">
+                                <div class="relative w-full h-64 md:h-full flex items-center justify-center">
+
+                                    <img src="img/bk.jpg" 
+                                         class="w-full h-full object-cover rounded-lg shadow-inner" 
+                                         alt="Projeto Figma"
+                                         loading="lazy">
+
+                                    <div class="absolute inset-0 rounded-lg shadow-inner flex items-center justify-center project-image-hover"></div>
+                                    
+                                    <img src="img/Captura de tela 2025-06-11 111215.png" 
+                                         class="hidden project-preview-source" 
+                                         alt="Project preview"
+                                         loading="lazy">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projeto 4 -->
+                    <div class="project-card transition-all duration-300 bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden animate-fade-in">
+                        <div class="md:flex flex-row-reverse">
+                            <div class="md:w-1/2 p-6 md:p-8 flex flex-col justify-between">
+                                <div>
+                                    <div class="flex justify-between items-start">
+                                        <h3 class="text-2xl font-bold mb-2">Pontos Turísticos Famosos</h3>
+                                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm font-medium">Concluído</span>
+                                    </div>
+                                    <p class="text-gray-600 dark:text-gray-300 mb-4">9 de Maio</p>
+                                    <p class="text-gray-600 dark:text-gray-300 mb-4">Criação de um site com tema livre de desenvolvedor web utilizando CSS Grid para organizar e dispor os elementos da página.</p>
+                                    
+                                    <h4 class="font-semibold mb-2">Tecnologias Usadas:</h4>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">HTML5</span>
+                                        <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-sm">CSS3</span>
+                                    </div>
+                                    
+                                    <h4 class="font-semibold mb-2">Desafios:</h4>
+                                    <ul class="list-disc pl-5 text-gray-600 dark:text-gray-300 mb-4">
+                                        <li>Manipulação de colunas e linhas com o display grid</li>
+                                        <li>Manter a responsividade com o display diferente do Flexbox</li>
+                                        <li>Sabedoria para decidir qual situação cabe cada tipo de display</li>
+                                    </ul>
+                                    
+                                    <h4 class="font-semibold mb-2">Aprendizados:</h4>
+                                    <ul class="list-disc pl-5 text-gray-600 dark:text-gray-300 mb-4">
+                                        <li>Nova forma de organização de elementos na interface</li>
+                                        <li>Capacidade de produzir sites com estruturas mais complexas</li>
+                                        <li>Uso do Display Grid alinhado com o Flexbox</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="mt-4">
+                                    <a href="https://dudsvr.github.io/Landing-Page---Grid/?authuser=2" class="flex items-center text-blue-600 dark:text-blue-400 hover:underline" target="_blank">
+                                        <i class="fas fa-external-link-alt mr-2"></i> Ver Projeto
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 bg-gray-200 dark:bg-gray-600 flex items-center justify-center p-8 project-image-container">
+                                <div class="relative w-full h-64 md:h-full flex items center justify-center">
+
+                                    <img src="img/alex-ovs-UDyF0_Frxqs-unsplash.jpg" 
+                                         class="w-full h-full object-cover rounded-lg shadow-inner" 
+                                         alt="Projeto Figma"
+                                         loading="lazy">
+
+                                    <div class="absolute inset-0 rounded-lg shadow-inner flex items-center justify-center project-image-hover"></div>
+                                    
+                                    <img src="img/display grid.PNG" 
+                                         class="hidden project-preview-source" 
+                                         alt="Project preview"
+                                         loading="lazy">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 5 -->
+                    <div class="project-card transition-all duration-300 bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden animate-fade-in">
+                        <div class="md:flex">
+                            <div class="md:w-1/2 p-6 md:p-8 flex flex-col justify-between">
+                                <div>
+                                    <div class="flex justify-between items-start">
+                                        <h3 class="text-2xl font-bold mb-2">Sabores da Terra</h3>
+                                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm font-medium">Concluído</span>
+                                    </div>
+                                    <p class="text-gray-600 dark:text-gray-300 mb-4">16 de Maio</p>
+                                    <p class="text-gray-600 dark:text-gray-300 mb-4">Criação de um sistema de reservas de um restaurante. O sistema precisa coletar informações para proporcionar uma experiência personalizada, através de #IDs e Inputs.</p>
+                                    
+                                    <h4 class="font-semibold mb-2">Tecnologias Usadas:</h4>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">HTML5</span>
+                                        <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">CSS3</span>
+                                    </div>
+                                    
+                                    <h4 class="font-semibold mb-2">Desafios:</h4>
+                                    <ul class="list-disc pl-5 text-gray-600 dark:text-gray-300 mb-4">
+                                        <li>Aplicação de IDs e Inputs de forma correta</li>
+                                        <li>Associação correta de Labels</li>
+                                        <li>Organização fluida de IDs para futura associação</li>
+                                    </ul>
+                                    
+                                    <h4 class="font-semibold mb-2">Aprendizados:</h4>
+                                    <ul class="list-disc pl-5 text-gray-600 dark:text-gray-300 mb-4">
+                                        <li>Conhecimento de diversos Inputs</li>
+                                        <li>Manipulação de IDs melhorada</li>
+                                        <li>Capacidade de produzir formulários mais completos</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="mt-4">
+                                    <a href="https://dudsvr.github.io/Sabores_da_Terra/?authuser=2" target="_blank" class="flex items-center text-blue-600 dark:text-blue-400 hover:underline">
+                                        <i class="fas fa-external-link-alt mr-2"></i> Ver Projeto
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 bg-gray-200 dark:bg-gray-600 flex items-center justify-center p-8 project-image-container">
+                                <div class="relative w-full h-64 md:h-full flex items center justify-center">
+                                   <img src="img/sabores da terra.PNG" 
+                                         class="w-full h-full object-cover rounded-lg shadow-inner" 
+                                         alt="Projeto Figma"
+                                         loading="lazy">
+
+                                    <div class="absolute inset-0 rounded-lg shadow-inner flex items-center justify-center project-image-hover"></div>
+                                    
+                                    <img src="img/sabores da terra 2.PNG" 
+                                         class="hidden project-preview-source" 
+                                         alt="Project preview"
+                                         loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 6 -->
+                    <div class="project-card transition-all duration-300 bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden animate-fade-in">
+                        <div class="md:flex flex-row-reverse">
+                            <div class="md:w-1/2 p-6 md:p-8 flex flex-col justify-between">
+                                <div>
+                                    <div class="flex justify-between items-start">
+                                        <h3 class="text-2xl font-bold mb-2">Sistema Solar Animado</h3>
+                                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm font-medium">Concluído</span>
+                                    </div>
+                                    <p class="text-gray-600 dark:text-gray-300 mb-4">22 de Maio</p>
+                                    <p class="text-gray-600 dark:text-gray-300 mb-4">Criação de uma animação do sistema solar usando @keyframes, com planetas orbitando em torno do sol com diferentes velocidades e tamanhos, simulando o movimento de um sistema solar.</p>
+                                    
+                                    <h4 class="font-semibold mb-2">Tecnologias Usadas:</h4>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">HTML5</span>
+                                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">CSS3</span>
+                                        <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-sm">JavaScript</span>
+                                    </div>
+                                    
+                                    <h4 class="font-semibold mb-2">Desafios:</h4>
+                                    <ul class="list-disc pl-5 text-gray-600 dark:text-gray-300 mb-4">
+                                        <li>Trabalhar com animações (Keyframes)</li>
+                                        <li>Implementar todas as figuras em PNG e ajustar tudo para nao colidirem</li>
+                                        <li>Primeiro contato com JavaScript</li>
+                                    </ul>
+                                    
+                                    <h4 class="font-semibold mb-2">Aprendizados:</h4>
+                                    <ul class="list-disc pl-5 text-gray-600 dark:text-gray-300 mb-4">
+                                        <li>Manipulação de CSS Keyframes</li>
+                                        <li>Diferentes tipos de animações possíveis somente com CSS</li>
+                                        <li>Menus de informação</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="mt-4">
+                                    <a href="https://dudsvr.github.io/Sistema_Solar/?authuser=2" class="flex items-center text-blue-600 dark:text-blue-400 hover:underline" target="_blank">
+                                        <i class="fas fa-external-link-alt mr-2"></i> Ver Projeto
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 bg-gray-200 dark:bg-gray-600 flex items-center justify-center p-8 project-image-container">
+                                <div class="relative w-full h-64 md:h-full flex items center justify-center">
+                                    <img src="img/alexander-andrews-30kHyW7TSB8-unsplash.jpg" 
+                                         class="w-full h-full object-cover rounded-lg shadow-inner" 
+                                         alt="Projeto Figma"
+                                         loading="lazy">
+
+                                    <div class="absolute inset-0 rounded-lg shadow-inner flex items-center justify-center project-image-hover"></div>
+                                    
+                                    <img src="img/sistema solar.PNG" 
+                                         class="hidden project-preview-source" 
+                                         alt="Project preview"
+                                         loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 7 -->
+                    <div class="project-card transition-all duration-300 bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden animate-fade-in">
+                        <div class="md:flex">
+                            <div class="md:w-1/2 p-6 md:p-8 flex flex-col justify-between">
+                                <div>
+                                    <div class="flex justify-between items-start">
+                                        <h3 class="text-2xl font-bold mb-2">Formas com CSS</h3>
+                                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm font-medium">Concluído</span>
+                                    </div>
+                                    <p class="text-gray-600 dark:text-gray-300 mb-4">23 de Maio</p>
+                                    <p class="text-gray-600 dark:text-gray-300 mb-4">Execução de 5 desafios com formas CSS: Carro Esportivo - Robô Futurista - Interface de Música - Gráfico de Barras - Padrão Decorativo</p>
+                                    
+                                    <h4 class="font-semibold mb-2">Tecnologias Usadas:</h4>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">HTML5</span>
+                                        <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">CSS3</span>
+                                    </div>
+                                    
+                                    <h4 class="font-semibold mb-2">Desafios:</h4>
+                                    <ul class="list-disc pl-5 text-gray-600 dark:text-gray-300 mb-4">
+                                        <li>Estilização correta das divs</li>
+                                        <li>Conexão entre elementos</li>
+                                        <li>Posicionamento certo de cada objeto</li>
+                                    </ul>
+                                    
+                                    <h4 class="font-semibold mb-2">Aprendizados:</h4>
+                                    <ul class="list-disc pl-5 text-gray-600 dark:text-gray-300 mb-4">
+                                        <li>Capacidade de criar formas somente com CSS>
+                                        <li>Manipulação de DIVs e melhor organização</li>
+                                        <li>Melhor entendimento em posicionamento relativo a outros elementos</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="mt-4">
+                                    <a href="https://dudsvr.github.io/Formas/" target="_blank" class="flex items-center text-blue-600 dark:text-blue-400 hover:underline">
+                                        <i class="fas fa-external-link-alt mr-2"></i> Ver Projeto
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 bg-gray-200 dark:bg-gray-600 flex items-center justify-center p-8 project-image-container">
+                                <div class="relative w-full h-64 md:h-full flex items center justify-center">
+                                   <img src="img/formas 1.jpg" 
+                                         class="w-full h-full object-cover rounded-lg shadow-inner" 
+                                         alt="Projeto Figma"
+                                         loading="lazy">
+
+                                    <div class="absolute inset-0 rounded-lg shadow-inner flex items-center justify-center project-image-hover"></div>
+                                    
+                                    <img src="img/Captura de tela 2025-06-11 110043.png" 
+                                         class="hidden project-preview-source" 
+                                         alt="Project preview"
+                                         loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção de Habilidades -->
+        <section id="habilidades" class="py-20 px-6 bg-gray-50 dark:bg-gray-800">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold mb-12 text-center animate-fade-in">Habilidades Adquiridas</h2>
+                
+                <div class="grid md:grid-cols-2 gap-12 mb-16">
+                    <div class="animate-fade-in">
+                        <h3 class="text-2xl font-semibold mb-6">Tecnologias Principais</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">HTML</span>
+                                    <span class="text-gray-600 dark:text-gray-400">80%</span>
+                                </div>
+                                <div class="skill-bar bg-gray-200 dark:bg-gray-600 w-full">
+                                    <div class="skill-progress bg-blue-500 w-[80%]"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">CSS</span>
+                                    <span class="text-gray-600 dark:text-gray-400">60%</span>
+                                </div>
+                                <div class="skill-bar bg-gray-200 dark:bg-gray-600 w-full">
+                                    <div class="skill-progress bg-purple-500 w-[60%]"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">TailwindCSS</span>
+                                    <span class="text-gray-600 dark:text-gray-400">40%</span>
+                                </div>
+                                <div class="skill-bar bg-gray-200 dark:bg-gray-600 w-full">
+                                    <div class="skill-progress bg-red-500 w-[40%]"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">JavaScript</span>
+                                    <span class="text-gray-600 dark:text-gray-400">5%</span>
+                                </div>
+                                <div class="skill-bar bg-gray-200 dark:bg-gray-600 w-full">
+                                    <div class="skill-progress bg-yellow-500 w-[5%]"></div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="animate-fade-in animate-delay-200 bg-white/70 dark:bg-gray-700/70 backdrop-blur-md rounded-xl shadow-lg p-6 border border-white/20 dark:border-gray-600/20">
+                        <h3 class="text-2xl font-semibold mb-6">Conquistas e Certificações</h3>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-white dark:bg-gray-700 rounded-lg shadow">
+                                <h4 class="font-medium flex items-center">
+                                    <i class="fas fa-certificate mr-3 text-blue-500"></i>
+                                    <span>Fundamentos do Hardware do Computador</span>
+                                </h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Concluído em 19 de Fevereiro de 2025</p>
+                            </div>
+                            <div class="p-4 bg-white dark:bg-gray-700 rounded-lg shadow">
+                                <h4 class="font-medium flex items-center">
+                                    <i class="fas fa-certificate mr-3 text-blue-500"></i>
+                                    <span>Windows Operating System</span>
+                                </h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Concluído em 26 de Fevereiro de 2025</p>
+                            </div>
+                            <div class="p-4 bg-white dark:bg-gray-700 rounded-lg shadow">
+                                <h4 class="font-medium flex items-center">
+                                    <i class="fas fa-certificate mr-3 text-blue-500"></i>
+                                    <span>Design Thinking</span>
+                                </h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Concluído em 05 de Maio de 2025</p>
+                            </div>
+                            <div class="p-4 bg-white dark:bg-gray-700 rounded-lg shadow">
+                                <h4 class="font-medium flex items-center">
+                                    <i class="fas fa-certificate mr-3 text-blue-500"></i>
+                                    <span>FLUÊNCIA - FUNDAMENTOS DA IA</span>
+                                </h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Concluído em 17 de Maio de 2025</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4">Soft Skills</h3>
+                        <div class="space-y-2">
+                            <div class="p-3 bg-white dark:bg-gray-700 rounded-lg shadow flex items-center">
+                                <i class="fas fa-users mr-3 text-purple-500"></i>
+                                <span>Trabalho em Equipe</span>
+                            </div>
+                            <div class="p-3 bg-white dark:bg-gray-700 rounded-lg shadow flex items-center">
+                                <i class="fas fa-comments mr-3 text-blue-500"></i>
+                                <span>Comunicação Eficaz</span>
+                            </div>
+                            <div class="p-3 bg-white dark:bg-gray-700 rounded-lg shadow flex items-center">
+                                <i class="fas fa-lightbulb mr-3 text-yellow-500"></i>
+                                <span>Pensamento Criativo</span>
+                            </div>
+                            <div class="p-3 bg-white dark:bg-gray-700 rounded-lg shadow flex items-center">
+                                <i class="fas fa-tasks mr-3 text-green-500"></i>
+                                <span>Gestão de Tempo</span>
+                            </div>
+                            <div class="p-3 bg-white dark:bg-gray-700 rounded-lg shadow flex items-center">
+                                <i class="fas fa-language mr-3 text-red-500"></i>
+                                <span>Inglês Intermediário</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4">Ferramentas</h3>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="p-3 bg-white dark:bg-gray-700 rounded-lg shadow flex items-center">
+                                <i class="fab fa-figma mr-3 text-purple-500"></i>
+                                <span>Figma</span>
+                            </div>
+                            <div class="p-3 bg-white dark:bg-gray-700 rounded-lg shadow flex items-center">
+                                <i class="fab fa-git-alt mr-3 text-orange-500"></i>
+                                <span>Git</span>
+                            </div>
+                            <div class="p-3 bg-white dark:bg-gray-700 rounded-lg shadow flex items-center">
+                                <i class="fab fa-github mr-3 text-gray-800 dark:text-gray-200"></i>
+                                <span>GitHub</span>
+                            </div>
+                            <div class="p-3 bg-white dark:bg-gray-700 rounded-lg shadow flex items-center">
+                                <i class="fab fa-trello mr-3 text-blue-500"></i>
+                                <span>Trello</span>
+                            </div>
+                            <div class="p-3 bg-white dark:bg-gray-700 rounded-lg shadow flex items-center">
+                                <i class="fas fa-terminal mr-3 text-gray-500"></i>
+                                <span>Terminal</span>
+                            </div>
+                            <div class="p-3 bg-white dark:bg-gray-700 rounded-lg shadow flex items-center">
+                                <i class="fas fa-code mr-3 text-green-500"></i>
+                                <span>VS Code</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <h3 class="text-2xl font-semibold mb-8 text-center animate-fade-in">Minha Evolução</h3>
+                
+                <div class="relative animate-fade-in animate-delay-200">
+                    <!-- Timeline -->
+                    <div class="relative timeline-container">
+                        <!-- Timeline Item 1 -->
+                        <div class="timeline-item relative pb-10 md:pb-16">
+                            <div class="flex flex-col md:flex-row">
+                                <div class="md:w-1/2 md:pr-12 mb-4 md:mb-0 md:text-right">
+                                    <h4 class="font-bold text-lg md:mr-10">Primeiros Passos</h4>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">Fevereiro 2025</p>
+                                </div>
+                                <div class="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 -translate-y-1/2 top-0 w-5 h-5 md:w-6 md:h-6 bg-blue-500 rounded-full z-10"></div>
+                                <div class="md:w-1/2 md:pl-12 mt-4 md:mt-0">
+                                    <div class="p-3 md:p-4 bg-white dark:bg-gray-700 rounded-lg shadow ml-10 md:ml-0">
+                                        <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">Iniciei o ano em fevereiro revisando os fundamentos da computação: entendi melhor o funcionamento do hardware, sistemas operacionais e aprofundei meu contato com metodologias ágeis como o Scrum. Também explorei conceitos visuais como arquétipos e tipografia, essenciais para uma boa comunicação visual..</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Timeline Item 2 -->
+                        <div class="timeline-item relative pb-10 md:pb-16">
+                            <div class="flex flex-col md:flex-row">
+                                <div class="order-2 md:order-1 md:w-1/2 md:pr-12 mb-4 md:mb-0 md:text-right">
+                                    <div class="p-3 md:p-4 bg-white dark:bg-gray-700 rounded-lg shadow ml-10 md:ml-0">
+                                        <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">Em março, mergulhei no estudo das cores e da Gestalt, o que me ajudou a entender como a estética influencia na usabilidade. Foi também o mês em que aprendi a prototipar telas em diferentes níveis de fidelidade usando o Figma — do rascunho à prévia realista de um sistema.</p>
+                                    </div>
+                                </div>
+                                <div class="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 -translate-y-1/2 top-0 w-5 h-5 md:w-6 md:h-6 bg-blue-500 rounded-full z-10"></div>
+                                <div class="order-1 md:order-2 md:w-1/2 md:pl-12 mt-0 md:mt-0">
+                                    <h4 class="font-bold text-lg md:ml-10">Design, UI/UX e Prototipagem</h4>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">Março 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Timeline Item 3 -->
+                        <div class="timeline-item relative pb-10 md:pb-16">
+                            <div class="flex flex-col md:flex-row">
+                                <div class="md:w-1/2 md:pr-12 mb-4 md:mb-0 md:text-right">
+                                    <h4 class="font-bold text-lg md:mr-10">Primeira página Web</h4>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">Abril 2025</p>
+                                </div>
+                                <div class="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 -translate-y-1/2 top-0 w-5 h-5 md:w-6 md:h-6 bg-blue-500 rounded-full z-10"></div>
+                                <div class="md:w-1/2 md:pl-12 mt-4 md:mt-0">
+                                    <div class="p-3 md:p-4 bg-white dark:bg-gray-700 rounded-lg shadow ml-10 md:ml-0">
+                                        <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">Abril marcou um ponto importante: desenvolvi minha primeira página web do zero utilizando HTML e CSS. Comecei a aplicar Flexbox para criar layouts mais organizados e responsivos.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Timeline Item 4 -->
+                        <div class="timeline-item relative pb-10 md:pb-16">
+                            <div class="flex flex-col md:flex-row">
+                                <div class="order-2 md:order-1 md:w-1/2 md:pr-12 mb-4 md:mb-0 md:text-right">
+                                    <div class="p-3 md:p-4 bg-white dark:bg-gray-700 rounded-lg shadow ml-10 md:ml-0">
+                                        <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">No mês de maio, avancei nas técnicas de estilização, aprendendo a usar o Display Grid, trabalhar com IDs e inputs, além de criar formas e animações com keyframes em CSS. Esses recursos deixaram meus projetos mais dinâmicos e visuais.</p>
+                                    </div>
+                                </div>
+                                <div class="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 -translate-y-1/2 top-0 w-5 h-5 md:w-6 md:h-6 bg-blue-500 rounded-full z-10"></div>
+                                <div class="order-1 md:order-2 md:w-1/2 md:pl-12 mt-0 md:mt-0">
+                                    <h4 class="font-bold text-lg md:ml-10">Se aprofundando na área</h4>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">Maio 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Timeline Item 5 -->
+                        <div class="timeline-item relative pb-0">
+                            <div class="flex flex-col md:flex-row">
+                                <div class="md:w-1/2 md:pr-12 mb-4 md:mb-0 md:text-right">
+                                    <h4 class="font-bold text-lg md:mr-10">Construção do Portfólio</h4>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">Junho - Atualmente</p>
+                                </div>
+                                <div class="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 -translate-y-1/2 top-0 w-5 h-5 md:w-6 md:h-6 bg-blue-500 rounded-full z-10"></div>
+                                <div class="md:w-1/2 md:pl-12 mt-4 md:mt-0">
+                                    <div class="p-3 md:p-4 bg-white dark:bg-gray-700 rounded-lg shadow ml-10 md:ml-0">
+                                        <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">Agora, em junho, estou focado na atividade semestral: a construção do meu portfólio. Ele reúne tudo o que aprendi até aqui, refletindo minha evolução técnica e criativa como estudante de Desenvolvimento de Sistemas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção de Reflexão -->
+        <section id="reflexao" class="py-20 px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold mb-12 text-center animate-fade-in">Reflexão Final</h2>
+                
+                <div class="grid md:grid-cols-1 gap-8 animate-fade-in">
+                    <div class="p-8 bg-white dark:bg-gray-700 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-semibold mb-4 flex items-center">
+                            <i class="fas fa-chart-line mr-3 text-green-500"></i>
+                            <span>Minha Evolução</span>
+                        </h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Olhando para trás, vejo o quanto cresci tecnicamente e pessoalmente. Quando comecei, achava que programação era apenas escrever comandos, mas descobri que é sobre resolver problemas, trabalhar em equipe e pensar de forma lógica e criativa. Os erros me ensinaram resiliência e a importância de ler documentações. 
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Me sinto mais confiante para aprender novas tecnologias, pois entendi que os fundamentos são mais importantes que frameworks específicos. Ainda tenho muito a aprender, mas agora sei como direcionar meus estudos de forma mais eficiente.
+                        </p>
+                    </div>
+                    
+                    <div class="p-8 bg-white dark:bg-gray-700 rounded-xl shadow-lg animate-fade-in animate-delay-200">
+                        <h3 class="text-2xl font-semibold mb-4 flex items-center">
+                            <i class="fas fa-bullseye mr-3 text-blue-500"></i>
+                            <span>Próximos Passos</span>
+                        </h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-medium text-lg mb-2">Objetivos Profissionais:</h4>
+                                <ul class="list-disc pl-5 space-y-2 text-gray-600 dark:text-gray-300">
+                                    <li>Conseguir meu primeiro estágio na área da TI</li>
+                                    <li>Contribuir para projetos open-source</li>
+                                    <li>Participar ativamente da comunidade tech</li>
+                                    <li>Trabalhar no Front-End como web developer</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-lg mb-2">Tecnologias para Aprender:</h4>
+                                <ul class="list-disc pl-5 space-y-2 text-gray-600 dark:text-gray-300">
+                                    <li>Frameworks como Bootstrap e tailwindcss</li>
+                                    <li>JavaScript e React</li>
+                                    <li>Banco de Dados</li>
+                                    <li>Linguagens de programação Back-End</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="p-8 bg-white dark:bg-gray-700 rounded-xl shadow-lg animate-fade-in animate-delay-400">
+                        <h3 class="text-2xl font-semibold mb-4 flex items-center">
+                            <i class="fas fa-lightbulb mr-3 text-yellow-500"></i>
+                            <span>Projetos Futuros</span>
+                        </h3>
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <div class="p-4 border border-gray-200 dark:border-gray-600 rounded-lg">
+                                <h4 class="font-medium mb-2">Website pelo WordPress</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-300">Produção de sites sem linha de código.</p>
+                            </div>
+                            <div class="p-4 border border-gray-200 dark:border-gray-600 rounded-lg">
+                                <h4 class="font-medium mb-2">Páginas dinâmicas com linguagem de programação</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-300">Uso de JavaScript e posteriormente Python para a produção de sites.</p>
+                            </div>
+                            <div class="p-4 border border-gray-200 dark:border-gray-600 rounded-lg">
+                                <h4 class="font-medium mb-2">Finalização do Aplicativo de Música</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-300">Tirar o BeatFlow do protótipo e escrever seu código.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção de Contato -->
+        <section id="contato" class="py-20 px-6 relative overflow-hidden">
+            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center opacity-30 dark:opacity-20"></div>
+            <div class="absolute inset-0 backdrop-blur-sm"></div>
+            <div class="max-w-4xl mx-auto relative z-10">
+                <h2 class="text-3xl font-bold mb-12 text-center" style="text-shadow: 0 0 8px rgba(255,255,255,0.5);">Contato Profissional</h2>
+                
+                <div class="grid md:grid-cols-2 gap-12 relative z-10">
+                    <div class="animate-fade-in bg-white/70 dark:bg-gray-700/70 backdrop-blur-md rounded-xl shadow-lg p-6 border border-white/20 dark:border-gray-600/20">
+                        <h3 class="text-xl font-semibold mb-6">Minhas Redes</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow">
+                                <div class="w-12 h-12 bg-gray-100 dark:bg-gray-600 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fab fa-github text-2xl text-gray-800 dark:text-gray-200"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">GitHub</h4>
+                                    <a href="https://github.com/dudsvr" target="_blank" class="text-blue-600 dark:text-blue-400 text-sm hover:underline">github.com/dudsvr</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow">
+                                <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fab fa-linkedin-in text-2xl text-blue-700 dark:text-blue-300"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Linkedin</h4>
+                                    <a href="https://www.linkedin.com/in/eduardo-vieira-roque-aab79634a/" target="_blank" class="text-blue-600 dark:text-blue-400 text-sm hover:underline">linkedin.com/in/eduardo-vieira-roque</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow">
+                                <div class="w-12 h-12 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope text-2xl text-red-700 dark:text-red-300"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">E-mail</h4>
+                                    <a href="mailto:dudz.vieira@gmail.com" class="text-blue-600 dark:text-blue-400 text-sm hover:underline">dudz.vieira@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="animate-fade-in animate-delay-200">
+                        <h3 class="text-xl font-semibold mb-6">Entre em Contato</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label for="name" class="block mb-2 text-sm font-medium">Seu Nome</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white/90 dark:bg-gray-700/90 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-2 text-sm font-medium">Seu E-mail</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white/90 dark:bg-gray-700/90 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="message" class="block mb-2 text-sm font-medium">Sua Mensagem</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white/90 dark:bg-gray-700/90 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                            </div>
+                            <button type="submit" class="px-6 py-3 bg-black dark:bg-white text-white dark:text-black rounded-lg font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors w-full">
+                                Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="py-12 px-6 bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 items-center md:items-start">
+                <!-- Sobre -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Eduardo V. Roque</h3>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        Desenvolvedor apaixonado por criar soluções inovadoras com tecnologia. 
+                    </p>
+                </div>
+
+                <!-- Links Rápidos -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Links Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#hero" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition">Início</a></li>
+                        <li><a href="#projetos" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition">Projetos</a></li>
+                        <li><a href="#habilidades" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition">Habilidades</a></li>
+                        <li><a href="#contato" class="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition">Contato</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contato -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contato</h3>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i> dudz.vieira@gmail.com</li>
+                        <li class="flex items-center"><i class="fab fa-github mr-2"></i> github.com/dudsvr</li>
+                        <li class="flex items-center"><i class="fab fa-linkedin mr-2"></i> linkedin.com/in/eduardo-vieira-roque</li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">Receba atualizações dos meus projetos.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Seu e-mail" class="px-4 py-2 rounded-l-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 focus:outline-none w-full">
+                        <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-r-lg hover:bg-blue-600 transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="max-w-6xl mx-auto border-t border-gray-200 dark:border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-600 dark:text-gray-400">
+                    © 2025 Eduardo Vieira Roque. Todos os direitos reservados.
+                </p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
